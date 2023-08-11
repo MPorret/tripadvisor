@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/img/Tripadvisor_logoset_solid_green.svg" />
+    <link rel="stylesheet" href="assets/css/font.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/icons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+    <script src="./assets/script/script.js"></script>
+
+    <title>Tourisme à Piriac-sur-mer - TripAdvisor</title>
+  </head>
+  <body>
+    <div id="modal" class="hidden">
+      <div>
+        <h2>Contactez-nous !</h2>
+        <form>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="Prénom"
+            required
+          />
+
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Nom"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+            required
+          ></textarea>
+          <button>Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <header>
+      <div class="container">
+        <i class="icon-menu_bars"></i>
+        <img
+          src="assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+          alt="TripAdvisor logo"
+        />
+        <nav>
+          <a href="#">
+            <i class="icon-pencil"></i>
+            <p>Avis</p>
+          </a>
+          <a href="#">
+            <i class="icon-heart"></i>
+            <p>Voyages</p>
+          </a>
+          <a href="#">
+            <i class="icon-notification_bell"></i>
+            <p>Alertes</p>
+          </a>
+          <button id="contact" href="#">Contactez-nous</button>
+          <a href="#">
+            <i class="icon-empty_cart"></i>
+            <p>Panier</p>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <h1><span class="color-peach">Explorez</span> Piriac-sur-Mer</h1>
+        <p>
+          Les revenus influencent le choix des expériences présentées sur cette
+          page : <a href="#">en savoir plus</a>.
+        </p>
+      </section>
+
+      <nav id="menu">
+        <div>
+          <p>Hôtels</p>
+          <i class="icon-hotels"></i>
+        </div>
+        <div>
+          <p>Activités</p>
+          <i class="icon-attractions"></i>
+        </div>
+        <div>
+          <p>Locations de vacances</p>
+          <i class="icon-vacation_rentals"></i>
+        </div>
+        <div>
+          <p>Restaurants</p>
+          <i class="icon-restaurants"></i>
+        </div>
+        <div>
+          <p>Forums de voyage</p>
+          <i class="icon-forums"></i>
+        </div>
+        <div>
+          <p>Plus</p>
+          <i class="icon-more_horizontal"></i>
+        </div>
+      </nav>
+
+      <section>
+        <div id="photos">
+          <img
+            src="assets/img/port-de-piriac-sur-mer.jpeg"
+            alt="Port de Piriac-sur-Mer avec des bateaux de plaisance et de pêche"
+          />
+          <div>
+            <img
+              src="assets/img/vvf-villages-de-piriac.jpeg"
+              alt="Vue aérienne de la côte de Piriac-sur-Mer"
+            />
+            <img
+              src="assets/img/pointe-du-castelli-piriac.jpeg"
+              alt="Falaise de la pointe de Castelli à marée haute"
+            />
+          </div>
+        </div>
+
+        <nav class="infos">
+          <span
+            >Europe > France > Pays-de-la-Loire > Loire-Atlantique >
+            Piriac-sur-mer</span
+          ><span>Visiter : Piriac-sur-Mer</span>
+        </nav>
+      </section>
+
+      <section id="ville">
+        <div>
+          <h2>Piriac-sur-mer, petit village de caractère</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            molestias exercitationem sed perferendis eveniet quo accusantium,
+            doloribus architecto laborum deleniti aspernatur quae fugiat illo,
+            est ipsam repellendus, voluptatibus? Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit.
+          </p>
+          <p>
+            Itaque dolor quae quo aut nemo nobis similique et, accusamus
+            repudiandae qui at aperiam. Enim asperiores quas itaque inventore
+            qui iure ratione. Accusantium, eligendi officia! Nihil assumenda
+            libero eveniet saepe dolorem repellendus dolorum at eos atque magnam
+            recusandae nulla molestiae natus tempore totam itaque incidunt
+            numquam, suscipit quisquam, magni expedita fuga. Delectus.
+          </p>
+        </div>
+        <div>
+          <div>
+            <h2>Piriac-sur-Mer : commencez à organiser !</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Repellendus, explicabo.
+            </p>
+            <button>Créer un voyage</button>
+          </div>
+          <img
+            src="assets/img/maps_cnuhsr.png"
+            alt="Carte des activités à faire à Piriac-sur-mer"
+          />
+        </div>
+      </section>
+
+      <section class="unmissable">
+        <h2>Piriac-sur-mer : les immanquables</h2>
+        <div>
+          <div class="main-theme">
+            <h3>Se divertir</h3>
+            <p>
+              Des lieux à voir, des rues à explorer et des expériences
+              emblématiques.
+            </p>
+            <a href="#">Tout afficher</a>
+          </div>
+          <div class="carousel">
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/c.jpg" alt="" />
+              <div>
+                <h4>Office du Tourisme de Piriac-sur-Mer</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>Offices de tourisme</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/plage-de-port-kennet.jpg" alt="" />
+              <div>
+                <h4>Plage de Port-Kennet</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>Plages</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/maison-du-patrimoine.jpg" alt="" />
+              <div>
+                <h4>Maison du Patrimoine</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>Musées d'histoire</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/piriac-aventure.jpg" alt="" />
+              <div>
+                <h4>Piriac Aventure Accrobranches</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>Parcours aventure & Tyroliennes</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/nautisme-en-pays-blanc.jpg" alt="" />
+              <div>
+                <h4>Nautisme en Pays Blanc</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>Locations de bateaux, Kayak & Canoë</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/port-de-la-turballe-1.jpg" alt="" />
+              <div>
+                <h4>Port de la Turballe</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>Marinas</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/traversee-des-marais.jpg" alt="" />
+              <div>
+                <h4>Le Petit Train des Marais Salants</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>Trains touristiques</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/port-de-la-turballe-1.jpg" alt="" />
+              <div>
+                <h4>Office du tourisme de la Turballe</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i>
+                </p>
+                <p>Office de tourisme</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/entree-du-musee-situe.jpg" alt="" />
+              <div>
+                <h4>La Maison de la Pêche</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>Musées d'histoire, musées spécialisés</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/guide-de-peche-en-mer.jpg" alt="" />
+              <div>
+                <h4>Guide de Peche en Mer - Anthony Guenec</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>Circuit de pêche en mer</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="main-theme">
+            <h3>Se reposer</h3>
+            <p>Un mélange de charme, de modernité et de valeurs sûres.</p>
+            <a href="#">Tout afficher</a>
+          </div>
+          <div class="carousel">
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/facade.jpg" alt="" />
+              <div>
+                <h4>
+                  Hotel de La Poste, Restaurant Le Castelli - Piriac-sur-mer
+                </h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/villa-brambell.jpg" alt="" />
+              <div>
+                <h4>Villa Brambell</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/hotel-de-la-plage.jpg" alt="" />
+              <div>
+                <h4>Hotel de la Plage</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/villa-ocean.jpg" alt="" />
+              <div>
+                <h4>Villa Ocean</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/img-20200718-182238-largejpg.jpg" alt="" />
+              <div>
+                <h4>Le Manoir des quatre saisons</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/devanture.jpg" alt="" />
+              <div>
+                <h4>Hotel Les Chants d'Ailes</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/les-buissonnets.jpg" alt="" />
+              <div>
+                <h4>Les Bissonnets - Gites et Chambres</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/logis-le-relais-marine.jpg" alt="" />
+              <div>
+                <h4>Le Relais Marine</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i>
+                </p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/vvf-villages-la-turballe.jpg" alt="" />
+              <div>
+                <h4>VVF Club Intense Les Plages de Guérande - La Turballe</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/chambre-vue-mer-avec.jpg" alt="" />
+              <div>
+                <h4>Castel Moor</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="main-theme">
+            <h3>Se restaurer</h3>
+            <p>Lieux incontournables où manger, boire et faire la fête.</p>
+            <a href="#">Tout afficher</a>
+          </div>
+          <div class="carousel">
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/salle-interieure.jpg" alt="" />
+              <div>
+                <h4>Le Castelli</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>€€-€€€ • Française, Européenne</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/20180823-213718-largejpg.jpg" alt="" />
+              <div>
+                <h4>Le Pöle Nord</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>€ • Desserts</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/la-vigie.jpg" alt="" />
+              <div>
+                <h4>La Vigie</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>€€-€€€ • Française, Européenne, saine</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/exterieur.jpg" alt="" />
+              <div>
+                <h4>Au 17bis</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>€€-€€€ • Française, Européenne</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/resized-20190217-130345.jpg" alt="" />
+              <div>
+                <h4>Crêperie de Keroman</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>€€-€€€ • Desserts, Française, Européenne</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/bienvenue-a-la-p-tite.jpg" alt="" />
+              <div>
+                <h4>La P'tite Fringale</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>€ • Française, Américaine, Restauration rapide</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/tartare-de-saumon.jpg" alt="" />
+              <div>
+                <h4>La Licorne</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>€€-€€€ • Française, Fruits de mer & poisson, saine</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/canapes-terrasse.jpg" alt="" />
+              <div>
+                <h4>Brasserie La Station</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i>
+                </p>
+                <p>€€-€€€ • Française, Bar, Saine</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/crepe-a-l-andouille-et.jpg" alt="" />
+              <div>
+                <h4>Crêperie Le Rozell Piriac sur mer</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+                <p>€€-€€€ • Française</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="favorite">
+                <i class="fa-regular fa-heart fa-lg"></i>
+              </div>
+              <img src="./assets/img/deco-interieur.jpg" alt="" />
+              <div>
+                <h4>Crêperie Lacomère</h4>
+                <p>
+                  <i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_full"></i
+                  ><i class="icon-bubble_rating_empty"></i>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Louez un logement pour votre prochaine escapade</h2>
+        <h3>Locations populaires à Piriac-sur-Mer</h3>
+        <div class="carousel xl">
+          <a href="#">
+            <img src="./assets/img/a7.jpg" alt="" />
+            <h4>Piriac sur Mer: Apartment T3, 67 m2, garden, Wifi, 5 people</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+            <p>4 couchages • 2 chambres • 2 salles de bain</p>
+          </a>
+          <a href="#">
+            <img src="./assets/img/51.jpg" alt="" />
+            <h4>Seasonal rental house Piriac-sur-mer 300 m from the beach</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+            <p>7 couchages • 4 chambres • 2 salles de bain</p>
+          </a>
+          <a href="#">
+            <img src="./assets/img/a4.jpg" alt="" />
+            <h4>Appartement face mer à Piriac sur Mer</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+            <p>2 couchages • 1 chambre • 1 salle de bain</p>
+          </a>
+          <a href="#">
+            <img src="./assets/img/90.jpg" alt="" />
+            <h4>
+              Le Pavillon d'ETE 'AUX TROIS SAISONS' à PIRIAC S MER (44) Mer,
+              plage Côte Atlant
+            </h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+            <p>3 couchages • 2 chambres • 1 salle de bain</p>
+          </a>
+          <a href="#">
+            <img src="./assets/img/4f.jpg" alt="" />
+            <h4>Grand T2 facing sea Piriac sur Mer</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+            <p>2 couchages • 1 chambre • 1 salle de bain</p>
+          </a>
+          <a href="#">
+            <img src="./assets/img/bc.jpg" alt="" />
+            <h4>Villa 100 meters from the beach in the center of Piriac.</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+            <p>8 couchages • 4 chambres • 2 salles de bain</p>
+          </a>
+          <a href="#">
+            <img src="./assets/img/b5.jpg" alt="" />
+            <h4>La Suite AUTOMNE -AUX TROIS SAISONS- PIRIAC S MER</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+            <p>3 couchages • 2 chambres • 2 salles de bain</p>
+          </a>
+          <a href="#">
+            <img src="./assets/img/7d.jpg" alt="" />
+            <h4>Charmante petite maison Piriac sur Mer</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+            <p>5 couchages • 2 chambres • 1 salle de bain</p>
+          </a>
+          <a href="#">
+            <img src="./assets/img/64.jpg" alt="" />
+            <h4>Bright holiday home large garden with trees beach 4mn walk</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+            <p>10 couchages • 5 chambres • 3 salles de bain</p>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Piriac-sur-Mer est géniale pour</h2>
+        <h3>Grands espaces</h3>
+        <div class="carousel carre">
+          <a href="#">
+            <img src="./assets/img/camping-des-flots-bleux.jpg" alt="" />
+            <h4>Camping des Flots Bleus</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+          </a>
+          <a href="#">
+            <img src="./assets/img/camping-armor-heol.jpg" alt="" />
+            <h4>Camping Capfun Armor Heol</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+          </a>
+          <a href="#">
+            <img src="./assets/img/bar-restaurant-ouvert.jpg" alt="" />
+            <h4>Camping Mon Calme</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+          </a>
+          <a href="#">
+            <img src="./assets/img/piscine-couverte.jpg" alt="" />
+            <h4>Domaine de Pouldroit</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+          </a>
+          <a href="#">
+            <img src="./assets/img/plage-a-proximite.jpg" alt="" />
+            <h4>Camping Le Véridet</h4>
+            <p>
+              <i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_full"></i
+              ><i class="icon-bubble_rating_empty"></i>
+            </p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img src="./assets/img/Tripadvisor_logoset_solid_green.svg" alt="" />
+      <p>
+        Made at Le Reacteur by
+        <a href="https://github.com/MPorret">Marine Porret</a> - 2023
+      </p>
+    </footer>
+  </body>
+</html>
