@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#modal").classList.remove("hidden");
   });
 
+  document.querySelector("#modal span").addEventListener("click", (e) => {
+    document.querySelector("#modal").classList.add("hidden");
+  });
+
   document.querySelector("form button").addEventListener("click", async (e) => {
     e.preventDefault();
 

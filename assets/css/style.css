@@ -94,6 +94,15 @@ i {
   width: 400px;
   border-radius: 10px;
   padding: 20px;
+  position: relative;
+}
+#modal > div span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#modal > div span:hover {
+  cursor: pointer;
 }
 #modal form {
   display: flex;
